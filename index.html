@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="script.js" defer></script>
+</head>
+<body class="bg-red-400/30 min-h-screen flex items-center justify-center">
+  <div class="max-w-2xl w-full bg-red-300/50 rounded-2xl shadow p-6">
+    <div id="startScreen" class="text-center">
+      <h1 class="text-2xl font-bold mb-4">Welcome to the Quiz</h1>
+      <p class="mb-6">Let's see how smart you really are 👀</p>
+      <button id="startBtn" class="bg-purple-500 text-white px-4 py-2 rounded font-bold active:bg-green-600">Start Quiz</button>
+    </div>
+    <div id="quizScreen" class="hidden">
+      <div class="flex justify-between items-center mb-4">
+        <span id="progressText" class="font-medium">Question 1 of 1</span>
+        <div class="w-1/2 h-2 bg-gray-200 rounded-full">
+          <div id="progressBar" class="h-2 bg-blue-600 rounded-full w-0"></div>
+        </div>
+      </div>
+
+      <h2 id="questionText" class="text-xl font-semibold mb-4">Question goes here</h2>
+      <div id="optionsWrap" class="space-y-3"></div>
+
+      <div class="flex justify-between mt-6">
+        <button id="prevBtn" class="bg-gray-200 px-4 py-2 rounded-xl hover:bg-gray-300" disabled>Prev</button>
+        <div>
+          <button id="nextBtn" class="hidden bg-blue-600 text-white px-4 py-2 rounded-xl hover:bg-blue-700">Next</button>
+          <button id="submitBtn" class="hidden bg-green-600 text-white px-4 py-2 rounded-xl hover:bg-green-700">Submit</button>
+        </div>
+      </div>
+    </div>
+    <div id="resultScreen" class="hidden text-center">
+      <h2 class="text-2xl font-bold mb-4">Your Results</h2>
+      <p id="scoreText" class="mb-4 text-lg font-medium">Score: 0</p>
+      <div id="reviewWrap" class="space-y-4 text-left"></div>
+      <button id="retryBtn" class="mt-6 bg-blue-600 text-white px-4 py-2 rounded-xl hover:bg-blue-700">Retry</button>
+    </div>
+  </div>
+</body>
+</html>
